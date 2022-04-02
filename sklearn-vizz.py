@@ -26,7 +26,7 @@ This is a web app demo using python libraries such as Streamlit, Sklearn etc
 
 st.sidebar.write ("For more info, please contact:")
 
-st.sidebar.write("<a href='https://www.linkedin.com/in/ahmad-faiz-mansor-27a25a16b/'>Ahmad Faiz bin Mansor </a>", unsafe_allow_html=True)
+st.sidebar.write("<a href='#'>Ahmad Faiz bin Mansor </a>", unsafe_allow_html=True)
 
 
 choice = st.sidebar.radio(
