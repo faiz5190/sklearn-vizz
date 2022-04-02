@@ -18,7 +18,7 @@ from sklearn.metrics import classification_report
 
 
 
-st.title('Machine Learning - CLASSIFICATION')
+st.title('Machine Learning - Streamlit 1st Project')
 
 st.sidebar.write("""
 This is a web app demo using python libraries such as Streamlit, Sklearn etc
@@ -26,7 +26,7 @@ This is a web app demo using python libraries such as Streamlit, Sklearn etc
 
 st.sidebar.write ("For more info, please contact:")
 
-st.sidebar.write("<a href='https://www.linkedin.com/in/yong-poh-yu/'>Dr. Yong Poh Yu </a>", unsafe_allow_html=True)
+st.sidebar.write("<a href='https://www.linkedin.com/in/ahmad-faiz-mansor-27a25a16b/'>Ahmad Faiz bin Mansor </a>", unsafe_allow_html=True)
 
 
 choice = st.sidebar.radio(
@@ -195,40 +195,40 @@ else:
    st.write("<font color='Aquamarine'>Note: No classification report generated.</font>", unsafe_allow_html=True)
 
 
-st.write("## 4: Principal Component Analysis Plot")
-suitable = 1
-if len(X_names) <2:
-  st.write("<font color='Aquamarine'>Note: No PCA plot as it requires at least two predictors.</font>", unsafe_allow_html=True)
-  suitable = 0
-else:
-    for names in X_names:
-        if names in cat_var:
-           st.write("<font color='Aquamarine'>Note: No PCA plot as it only supports numerical predictors.</font>", unsafe_allow_html=True)
-           suitable = 0
-           break
+# st.write("## 4: Principal Component Analysis Plot")
+# suitable = 1
+# if len(X_names) <2:
+#   st.write("<font color='Aquamarine'>Note: No PCA plot as it requires at least two predictors.</font>", unsafe_allow_html=True)
+#   suitable = 0
+# else:
+#     for names in X_names:
+#         if names in cat_var:
+#            st.write("<font color='Aquamarine'>Note: No PCA plot as it only supports numerical predictors.</font>", unsafe_allow_html=True)
+#            suitable = 0
+#            break
 
-if suitable == 1:
-   pca = PCA(2)
-   X_projected = pca.fit_transform(X)
+# if suitable == 1:
+#    pca = PCA(2)
+#    X_projected = pca.fit_transform(X)
 
-   x1 = X_projected[:, 0]
-   x2 = X_projected[:, 1]
+#    x1 = X_projected[:, 0]
+#    x2 = X_projected[:, 1]
 
-   fig = plt.figure()
-   plt.scatter(x1, x2,
-               c=y, alpha=0.8,
-               cmap='viridis')
+#    fig = plt.figure()
+#    plt.scatter(x1, x2,
+#                c=y, alpha=0.8,
+#                cmap='viridis')
 
-   plt.xlabel('Principal Component 1')
-   plt.ylabel('Principal Component 2')
-   plt.colorbar()
-   st.pyplot(fig)
+#    plt.xlabel('Principal Component 1')
+#    plt.ylabel('Principal Component 2')
+#    plt.colorbar()
+#    st.pyplot(fig)
             
             
-hide_streamlit_style = """
-            <style>
-            #MainMenu {visibility: hidden;}
-            footer {visibility: hidden;}
-            </style>
-            """
-st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
+# hide_streamlit_style = """
+#             <style>
+#             #MainMenu {visibility: hidden;}
+#             footer {visibility: hidden;}
+#             </style>
+#             """
+# st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
